@@ -10,7 +10,7 @@ namespace DA_BanDoChoi_API.Configuration
         {
             builder.HasKey(x => x.UserID);
             builder.Property(x => x.Description).HasColumnType("nvarchar(1000)");
-      
+            builder.HasOne(c => c.Customer).WithOne(c => c.Cart).HasForeignKey<Cart>(c => c.UserID);
         }
     }
 }

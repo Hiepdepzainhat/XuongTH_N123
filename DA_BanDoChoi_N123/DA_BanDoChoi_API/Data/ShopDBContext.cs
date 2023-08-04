@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
-namespace DA_BanDoChoi_N123_Share.Data
+namespace DA_BanDoChoi_API.Data
 {
     public class ShopDBContext : DbContext
     {
@@ -47,8 +47,7 @@ namespace DA_BanDoChoi_N123_Share.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=LAPTOP-DAV1LO0Q\\SQLEXPRESS;Initial Catalog=DB_XuongTH_Bandochoi;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-AKSDRER\\MOMO;Initial Catalog=DuAnXuong;Integrated Security=True");
         }
-
     }
 }

@@ -9,7 +9,7 @@ namespace DA_BanDoChoi_API.Configuration
         public void Configure(EntityTypeBuilder<OrderDetail> builder)
         {
 
-            builder.HasKey(x => new { x.OrderID, x.ProductID });
+            builder.HasKey(x => x.Id);
             builder.Property(x => x.Price).HasColumnType("int");
             builder.Property(x => x.Quantity).HasColumnType("int");
             builder.HasOne(x => x.Order).WithMany(x => x.OrderDetail).HasForeignKey(x => x.OrderID);

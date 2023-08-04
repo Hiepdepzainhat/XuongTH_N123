@@ -9,7 +9,8 @@ namespace DA_BanDoChoi_N123_Share.Models
 {
     public class OrderDetail
     {
-        public Guid OrderID { get; set; }       
+        public Guid Id { get; set; }
+        public Guid OrderID { get; set; }
         public Guid ProductID { get; set; }
         public int? Price { get; set; }
         public int? Quantity { get; set; }

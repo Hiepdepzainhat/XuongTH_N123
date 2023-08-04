@@ -11,7 +11,7 @@ namespace DA_BanDoChoi_API.Configuration
             builder.HasKey(x => x.ID);
             builder.Property(x => x.Star).HasColumnType("int");
             builder.Property(x => x.Content).HasColumnType("nvarchar(1000)");
-            builder.HasOne(x => x.OrderDetail).WithMany(x => x.Ratings).HasForeignKey(x => x.ProductID);
+            builder.HasOne(x => x.OrderDetail).WithMany(x => x.Ratings).HasForeignKey(x => x.ID);
             builder.HasOne(x => x.Customer).WithMany(x => x.Rating).HasForeignKey(x => x.CustomerID);
         }
     }

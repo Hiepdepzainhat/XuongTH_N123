@@ -1,4 +1,5 @@
-using DA_BanDoChoi_N123_Share.Data;
+
+using DA_BanDoChoi_API.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
